@@ -1,21 +1,13 @@
-import { Link } from "react-router";
+import buttonsContent from "./buttonsContent.json";
+import MenuButton from "../MenuButton";
 
 function Navbar() {
   return (
     <nav>
-      <ul className="flex flex-row gap-2">
-        <li>
-          <Link to="/">Accueil</Link>
-        </li>
-        <li>
-          <Link to="/course">Parcours</Link>
-        </li>
-        <li>
-          <Link to="/projects">Projets</Link>
-        </li>
-        <li>
-          <Link to="/contact">Contact</Link>
-        </li>
+      <ul className="flex flex-row gap-12">
+        {buttonsContent.map((button) => (
+          <MenuButton route={button.route} label={button.label} />
+        ))}
       </ul>
     </nav>
   );

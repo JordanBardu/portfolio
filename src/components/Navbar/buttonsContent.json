@@ -1,0 +1,18 @@
+[
+  {
+    "route": "/",
+    "label": "Accueil"
+  },
+  {
+    "route": "/course",
+    "label": "Parcours"
+  },
+  {
+    "route": "/projects",
+    "label": "Projets"
+  },
+  {
+    "route": "/contact",
+    "label": "Contact"
+  }
+]
