@@ -1,18 +1,20 @@
+import { Link } from "react-router";
+
 function Navbar() {
   return (
     <nav>
       <ul className="flex flex-row gap-2">
         <li>
-          <a href="/">Accueil</a>
+          <Link to="/">Accueil</Link>
         </li>
         <li>
-          <a href="/parcours">Parcours</a>
+          <Link to="/course">Parcours</Link>
         </li>
         <li>
-          <a href="/projets">Projets</a>
+          <Link to="/projects">Projets</Link>
         </li>
         <li>
-          <a href="/contact">Contact</a>
+          <Link to="/contact">Contact</Link>
         </li>
       </ul>
     </nav>
