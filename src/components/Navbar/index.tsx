@@ -4,7 +4,7 @@ import MenuButton from "../MenuButton";
 function Navbar() {
   return (
     <nav>
-      <ul className="flex flex-row gap-12">
+      <ul className="fixed top-0 left-0 w-full z-50 flex flex-row items-start px-6 justify-between">
         {buttonsContent.map((button) => (
           <MenuButton route={button.route} label={button.label} />
         ))}

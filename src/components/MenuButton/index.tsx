@@ -3,14 +3,14 @@ import { Link } from "react-router";
 
 function MenuButton({ route, label }: MenuButtonProps) {
   const classes =
-    "absolute inset-0 flex items-center justify-center text-4xl font-black uppercase tracking-wide transition-all duration-300";
+    "absolute inset-0 flex items-center justify-center text-xl font-black uppercase tracking-wide transition-all duration-300";
 
   return (
     <li>
-      <Link to={route} className="relative overflow-hidden group px-4 py-2">
+      <Link to={route} className="relative overflow-hidden group px-4">
         {/*Texte principal*/}
         <div className="overflow-hidden">
-          <span className="relative z-20 text-4xl font-black uppercase tracking-wide text-[#fce3be] transition-transform duration-300">
+          <span className="relative z-20 text-xl font-black uppercase tracking-wide text-text transition-transform duration-300">
             {label}
           </span>
         </div>
@@ -33,16 +33,14 @@ function MenuButton({ route, label }: MenuButtonProps) {
         {/*  </span>*/}
         {/*</div>*/}
 
-        {/*Couche orange clair */}
         <span
-          className={`${classes} z-10 text-[#fcb06a] -translate-y-0 transition-all group-hover:translate-y-1`}
+          className={`${classes} z-10 text-secondary -translate-y-0 transition-all group-hover:translate-y-1`}
         >
           {label}
         </span>
 
-        {/*Couche orange foncé*/}
         <span
-          className={`${classes} z-5 text-[#fd4d17] -translate-y-0 transition-all group-hover:translate-y-2`}
+          className={`${classes} z-5 text-primary -translate-y-0 transition-all group-hover:translate-y-2`}
         >
           {label}
         </span>
