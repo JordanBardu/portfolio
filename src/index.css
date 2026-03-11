@@ -12,6 +12,12 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'Nunito';
+  src: url('./assets/fonts/nunito.ttf') format('truetype');
+  font-style: normal;
+}
+
 @theme {
   --color-bg: #001220;
   --color-primary: #C40C0C;
