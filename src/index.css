@@ -13,16 +13,16 @@
 }
 
 @font-face {
-  font-family: 'Nunito';
-  src: url('./assets/fonts/nunito.ttf') format('truetype');
+  font-family: "Nunito";
+  src: url("./assets/fonts/nunito.ttf") format("truetype");
   font-style: normal;
 }
 
 @theme {
   --color-bg: #001220;
-  --color-primary: #C40C0C;
-  --color-secondary: #FF6500;
-  --color-text: #F6CE71;
+  --color-primary: #c40c0c;
+  --color-secondary: #ff6500;
+  --color-text: #f6ce71;
 }
 
 :root {
@@ -32,7 +32,8 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-image: url('./assets/images/fond-vagues.svg');
+  /*background-image: url('./assets/images/fond-vagues.svg');*/
+  background-color: var(--color-bg);
   background-size: cover;
   background-repeat: no-repeat;
 
@@ -47,4 +48,9 @@ body {
   display: flex;
   min-width: 320px;
   min-height: 100vh;
+}
+
+.text-outline {
+  -webkit-text-stroke: 1px white;
+  color: transparent;
 }

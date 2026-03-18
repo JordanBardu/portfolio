@@ -1,1 +1,3 @@
-- Alléger les animations: enlever celles du texte ? 
+- Avoir un composant unique pour les sections de Home et le contenu dans un json 
+- Remettre le Hero dans Home mais le décomposer (icones)
+- 
