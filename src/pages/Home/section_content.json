@@ -2,13 +2,11 @@
   "sections": [
     {
       "title": "A PROPOS",
-      "description": "Développeur React/TypeScript junior passionné par la création d’interfaces modernes, fluides et animées. J’aime concevoir des expériences utilisateur soignées et travailler sur des projets où design et technique se rencontrent.",
-      "anchor": "home-about"
+      "description": "Développeur React/TypeScript junior passionné par la création d’interfaces modernes, fluides et animées. J’aime concevoir des expériences utilisateur soignées et travailler sur des projets où design et technique se rencontrent."
     },
     {
       "title": "STACK TECHNIQUE",
-      "description": "Ma stack principale repose sur React, TypeScript et TailwindCSS. J’utilise également Framer Motion pour les animations, Git pour le versioning et j’ai de bonnes bases en intégration et en accessibilité.",
-      "anchor": "home-stack"
+      "description": "Ma stack principale repose sur React, TypeScript et TailwindCSS. J’utilise également Framer Motion pour les animations, Git pour le versioning et j’ai de bonnes bases en intégration et en accessibilité."
     }
   ]
 }

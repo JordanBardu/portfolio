@@ -1,5 +1,5 @@
 import content from "./section_content.json";
-import { motion } from "motion/react";
+import { motion, useDragControls } from "motion/react";
 import reactIconSvg from "../../assets/svg/react-icon.svg";
 import typescriptIconSvg from "../../assets/svg/ts-icon.svg";
 import tailwindIconSvg from "../../assets/svg/tailwind-icon.svg";
@@ -8,12 +8,10 @@ import PrimaryButton from "../../components/PrimaryButton";
 
 function Home() {
   const handleOnClick = () => {
-    const target = document.getElementById("home-about");
+    const target = document.getElementById("home-sections");
     if (!target) return;
 
-    const OFFSET = 144 + 48;
-
-    const y = target.getBoundingClientRect().top + window.scrollY - OFFSET;
+    const y = target.getBoundingClientRect().top + window.scrollY;
 
     window.scrollTo({
       top: y,
@@ -22,7 +20,7 @@ function Home() {
   };
 
   return (
-    <div>
+    <div className="flex flex-col items-center">
       <div className="relative min-h-screen w-full flex flex-row items-center">
         <div className="flex flex-row justify-center items-center gap-12">
           <h1 className="bg-gradient-to-b from-text to-primary inline-block text-transparent bg-clip-text font-[Edo] text-8xl">
@@ -84,27 +82,52 @@ function Home() {
           <ExternalLinks />
         </article>
 
-        <div className="absolute bottom-8 right-8">
+        <div className="absolute bottom-8 right-8 pointer-events-auto">
           <PrimaryButton icon="fa-arrow-down" onClick={handleOnClick} />
         </div>
       </div>
 
-      {content.sections.map((section, index) => (
-        <section
-          key={index}
-          className="flex flex-col items-center min-h-screen w-full p-12 mt-36"
-          id={section.anchor}
-        >
-          <div className="text-center w-full">
-            <h2 className="text-9xl font-bold mb-6 w-full text-outline opacity-70 flex justify-start">
-              {section.title}
-            </h2>
-            <p className="text-lg opacity-90 font-[Nunito] leading-relaxed">
-              {section.description}
-            </p>
-          </div>
-        </section>
-      ))}
+      <div id="home-sections" className="flex flex-col items-center w-full">
+        {content.sections.map((section, index) => {
+          const dragControls = useDragControls();
+          const floatX = (index % 2 === 0 ? 1 : -1) * (18 + index * 6);
+          const floatY = (index % 3 === 0 ? -1 : 1) * (14 + index * 5);
+
+          return (
+            <motion.section
+              key={index}
+              drag
+              dragControls={dragControls}
+              dragListener={false}
+              dragMomentum={false}
+              className="flex relative flex-col items-center w-[80%] p-12 mt-36 border overflow-hidden rounded-2xl border-white/40 select-none"
+              animate={{
+                x: [0, floatX, -floatX * 0.7, floatX * 0.3, 0],
+                y: [0, floatY, -floatY * 0.6, floatY * 0.4, 0],
+              }}
+              transition={{
+                duration: 18 + index * 4,
+                repeat: Infinity,
+                ease: "easeInOut",
+              }}
+            >
+              <motion.div
+                className="bg-white/40 h-4 w-full absolute top-0 cursor-grab active:cursor-grabbing"
+                onPointerDown={(e) => dragControls.start(e)}
+              />
+
+              <div className="text-center w-full">
+                <h2 className="text-9xl font-bold mb-6 w-full text-outline opacity-70 flex justify-start">
+                  {section.title}
+                </h2>
+                <p className="text-lg opacity-90 font-[Nunito] leading-relaxed">
+                  {section.description}
+                </p>
+              </div>
+            </motion.section>
+          );
+        })}
+      </div>
     </div>
   );
 }
