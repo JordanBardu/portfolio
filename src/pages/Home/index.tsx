@@ -90,8 +90,8 @@ function Home() {
       <div id="home-sections" className="flex flex-col items-center w-full">
         {content.sections.map((section, index) => {
           const dragControls = useDragControls();
-          const floatX = (index % 2 === 0 ? 1 : -1) * (18 + index * 6);
-          const floatY = (index % 3 === 0 ? -1 : 1) * (14 + index * 5);
+          const floatX = (index % 2 === 0 ? 1 : -1) * (10 + index * 4);
+          const floatY = (index % 3 === 0 ? -1 : 1) * (8 + index * 3);
 
           return (
             <motion.section
@@ -102,8 +102,8 @@ function Home() {
               dragMomentum={false}
               className="flex relative flex-col items-center w-[80%] p-12 mt-36 border overflow-hidden rounded-2xl border-white/40 select-none"
               animate={{
-                x: [0, floatX, -floatX * 0.7, floatX * 0.3, 0],
-                y: [0, floatY, -floatY * 0.6, floatY * 0.4, 0],
+                x: [0, floatX, -floatX * 0.4, floatX * 0.2, 0],
+                y: [0, floatY, -floatY * 0.35, floatY * 0.25, 0],
               }}
               transition={{
                 duration: 18 + index * 4,

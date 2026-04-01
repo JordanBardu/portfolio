@@ -6,7 +6,7 @@
     },
     {
       "title": "STACK TECHNIQUE",
-      "description": "Ma stack principale repose sur React, avec également des compétences en React Native, ainsi que sur TypeScript et Tailwind CSS (ou Styled Components).\nJe maîtrise les fondamentaux du développement web (HTML, CSS, JavaScript) et j’accorde une attention particulière à la qualité de l’expérience utilisateur, notamment à travers des animations réalisées avec Framer Motion.\n\nJ’utilise Git pour le versioning et développe des projets respectant les bonnes pratiques en matière d’accessibilité et de référencement SEO.\nMon profil est complété par la gestion d’état avec Redux ou Zustand, la récupération de données avec React Query, ainsi que par l’écriture de tests unitaires à l’aide de React Testing Library."
+      "description": "Ma stack principale repose sur React, avec également des compétences en React Native, ainsi que sur TypeScript et Tailwind CSS.\nJe maîtrise les fondamentaux du développement web (HTML, CSS, JavaScript) et j’accorde une attention particulière à la qualité de l’expérience utilisateur, notamment à travers des animations réalisées avec Framer Motion.\n\nJ’utilise Git pour le versioning et développe des projets respectant les bonnes pratiques en matière d’accessibilité et de référencement SEO.\nMon profil est complété par la gestion d’état avec Redux ou Zustand, la récupération de données avec React Query, ainsi que par l’écriture de tests unitaires à l’aide de React Testing Library."
     }
   ]
 }

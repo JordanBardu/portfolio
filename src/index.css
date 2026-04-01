@@ -25,6 +25,8 @@
   --color-text: #f6ce71;
 }
 
+/*Couleurs pour le fond ? #303030 #130E0A #120D16*/
+
 :root {
   font-family: "Mont", system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -32,10 +34,9 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  /*background-image: url('./assets/images/fond-vagues.svg');*/
-  background-color: var(--color-bg);
-  background-size: cover;
-  background-repeat: no-repeat;
+  background: linear-gradient(120deg, #001220, #020b1a, #0a1f33, #001220);
+  background-size: 400% 400%;
+  animation: bgMove 40s ease infinite;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -53,4 +54,16 @@ body {
 .text-outline {
   -webkit-text-stroke: 1px white;
   color: transparent;
+}
+
+@keyframes bgMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }

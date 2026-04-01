@@ -1,6 +1,6 @@
 function ExternalLinks() {
   const liClasses =
-    "flex flex-row gap-2 border p-2 rounded-lg items-center justify-center hover:bg-primary hover:cursor-pointer transition-colors duration-300";
+    "flex flex-row gap-2 border p-2 rounded-lg items-center justify-center hover:bg-white/50 hover:cursor-pointer transition-colors duration-300";
   // TODO : Externaliser les svg
   return (
     <section>
