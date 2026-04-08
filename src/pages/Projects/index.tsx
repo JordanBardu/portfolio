@@ -1,9 +1,10 @@
+import OutlineTitle from "../../components/OutlineTitle";
+
 function Projects() {
   return (
-    <div>
-      <h1>Projects</h1>
-      <p>Welcome to the projects page!</p>
-    </div>
+      <div className="p-6">
+          <OutlineTitle title={"Projets"} size={"small"}/>
+      </div>
   );
 }
 

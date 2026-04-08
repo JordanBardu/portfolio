@@ -12,7 +12,7 @@
     "label": "Projets"
   },
   {
-    "route": "/contact",
-    "label": "Contact"
+    "route": "/skills",
+    "label": "Compétences"
   }
 ]

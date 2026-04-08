@@ -1,7 +1,9 @@
 export type PrimaryButtonProps = {
   icon?: string;
   content?: React.ReactNode;
-  size?: PrimaryButtonSizeEnum;
+  buttonSize?: PrimaryButtonSizeEnum;
+  iconSize?: PrimaryButtonSizeEnum;
+  textSize?: PrimaryButtonSizeEnum;
   onClick: () => void;
 };
 

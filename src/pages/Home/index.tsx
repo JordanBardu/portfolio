@@ -5,9 +5,10 @@ import typescriptIconSvg from "../../assets/svg/ts-icon.svg";
 import tailwindIconSvg from "../../assets/svg/tailwind-icon.svg";
 import ExternalLinks from "../../components/ExternalLinks";
 import PrimaryButton from "../../components/PrimaryButton";
+import { PrimaryButtonSizeEnum } from "../../components/PrimaryButton/types.ts";
 
 function Home() {
-  const handleOnClick = () => {
+  const handleArrowClick = () => {
     const target = document.getElementById("home-sections");
     if (!target) return;
 
@@ -17,6 +18,12 @@ function Home() {
       top: y,
       behavior: "smooth",
     });
+  };
+
+  const handleContactClick = () => {
+    document
+      .getElementById("contact-form")
+      ?.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
@@ -82,8 +89,22 @@ function Home() {
           <ExternalLinks />
         </article>
 
-        <div className="absolute bottom-8 right-8 pointer-events-auto">
-          <PrimaryButton icon="fa-arrow-down" onClick={handleOnClick} />
+        <div className="absolute right-8">
+          <PrimaryButton
+            icon="fa-pen"
+            content="ME CONTACTER"
+            buttonSize={PrimaryButtonSizeEnum.LARGE}
+            textSize={PrimaryButtonSizeEnum.LARGE}
+            iconSize={PrimaryButtonSizeEnum.MEDIUM}
+            onClick={handleContactClick}
+          />
+        </div>
+        <div className="fixed bottom-8 right-8">
+          <PrimaryButton
+            icon="fa-arrow-down"
+            onClick={handleArrowClick}
+            iconSize={PrimaryButtonSizeEnum.LARGE}
+          />
         </div>
       </div>
 
@@ -100,7 +121,7 @@ function Home() {
               dragControls={dragControls}
               dragListener={false}
               dragMomentum={false}
-              className="flex relative flex-col items-center w-[80%] p-12 mt-36 border overflow-hidden rounded-2xl border-white/40 select-none"
+              className="flex relative flex-col items-center w-[80%] p-12 mt-36 border overflow-hidden rounded-2xl border-white/40 select-none backdrop-blur-xl bg-white/3 shadow-[0_8px_32px_rgba(0,0,0,0.25)]"
               animate={{
                 x: [0, floatX, -floatX * 0.4, floatX * 0.2, 0],
                 y: [0, floatY, -floatY * 0.35, floatY * 0.25, 0],
@@ -117,7 +138,7 @@ function Home() {
               />
 
               <div className="text-center w-full">
-                <h2 className="text-9xl font-bold mb-6 w-full text-outline opacity-70 flex justify-start">
+                <h2 className="text-9xl font-bold mb-4 w-full text-outline opacity-70 flex justify-start">
                   {section.title}
                 </h2>
                 <p className="text-lg opacity-90 font-[Nunito] leading-relaxed">
@@ -128,6 +149,69 @@ function Home() {
           );
         })}
       </div>
+
+      <section className="max-w-xl mx-auto p-6 mt-96 mb-24" id="contact-form">
+        <h2 className="text-3xl font-semibold mb-6">Contact</h2>
+
+        <form className="flex flex-col gap-4 w-full">
+          <div className="flex w-full justify-center gap-6">
+            <div className="flex flex-col w-[48%]">
+              <label htmlFor="firstname" className="text-sm mb-1">
+                Prénom
+              </label>
+              <input
+                id="firstname"
+                type="text"
+                placeholder="Jordan"
+                className="rounded-md bg-transparent border border-white/20 px-4 py-2 focus:outline-none focus:border-primary"
+              />
+            </div>
+
+            <div className="flex flex-col w-[48%]">
+              <label htmlFor="lastname" className="text-sm mb-1">
+                Nom
+              </label>
+              <input
+                id="lastname"
+                type="text"
+                placeholder="Bardu"
+                className="rounded-md bg-transparent border border-white/20 px-4 py-2 focus:outline-none focus:border-primary"
+              />
+            </div>
+          </div>
+
+          <div className="flex flex-col w-full justify-center">
+            <label htmlFor="email" className="text-sm mb-1">
+              Email
+            </label>
+            <input
+              id="email"
+              type="email"
+              placeholder="email@exemple.com"
+              className="rounded-md bg-transparent border border-white/20 px-4 py-2 focus:outline-none focus:border-primary"
+            />
+          </div>
+
+          <div className="flex flex-col w-full justify-center">
+            <label htmlFor="message" className="text-sm mb-1">
+              Message
+            </label>
+            <textarea
+              id="message"
+              rows={5}
+              placeholder="Votre message..."
+              className="rounded-md bg-transparent border border-white/20 px-4 py-2 resize-none focus:outline-none focus:border-primary"
+            ></textarea>
+          </div>
+
+          <button
+            type="submit"
+            className="mt-4 self-start px-6 py-2 rounded-md bg-primary text-white font-medium hover:bg-secondary transition cursor-pointer"
+          >
+            Envoyer
+          </button>
+        </form>
+      </section>
     </div>
   );
 }

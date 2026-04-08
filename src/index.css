@@ -44,6 +44,11 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+::selection {
+  color: #fff;
+  background: var(--color-primary);
+}
+
 body {
   margin: 0;
   display: flex;

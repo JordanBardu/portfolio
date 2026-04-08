@@ -1,0 +1,28 @@
+{
+  "timeline": [
+    {
+      "date": "2024 - present",
+      "title": "Développeur Front-end (alternance)",
+      "subtitle": "Lille, Euratechnologies",
+      "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley",
+      "logo": "jooxter",
+      "iconColor": "primary"
+    },
+    {
+      "date": "2022 - 2024",
+      "title": "Licence Informatique",
+      "subtitle": "Université de Lille",
+      "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley",
+      "logo": "univ",
+      "iconColor": "primary"
+    },
+    {
+      "date": "2008 - 2010",
+      "title": "Web Designer",
+      "subtitle": "Los Angeles, CA",
+      "description": "User Experience, Visual Design",
+      "logo": null,
+      "iconColor": "primary"
+    }
+  ]
+}
