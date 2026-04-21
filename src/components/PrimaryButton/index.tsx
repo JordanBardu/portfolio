@@ -8,7 +8,7 @@ function PrimaryButton({
   iconSize = PrimaryButtonSizeEnum.SMALL,
   textSize = PrimaryButtonSizeEnum.SMALL,
 }: PrimaryButtonProps) {
-  const buttonClasses = `absolute inset-0 bg-white rounded-3xl flex justify-center items-center transition-transform duration-200 ease-out hover:translate-x-[4px] hover:translate-y-[4px] hover:cursor-pointer active:translate-x-[0px] active:translate-y-[0px] border-4 border-[#c40c0c] active:border-[#f6ce71] hover:border-[#f6ce71] ${content && icon ? "gap-4" : ""}`;
+  const buttonClasses = `absolute inset-0 bg-test rounded-3xl flex justify-center items-center transition-transform duration-200 ease-out hover:translate-x-[4px] hover:translate-y-[4px] hover:cursor-pointer active:translate-x-[0px] active:translate-y-[0px] border-4 border-[#c40c0c] active:border-[#f6ce71] hover:border-[#f6ce71] ${content && icon ? "gap-4" : ""}`;
   const buttonSizeMap = {
     small: "h-24 w-24",
     medium: "h-24 w-52",

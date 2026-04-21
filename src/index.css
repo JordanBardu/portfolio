@@ -7,6 +7,12 @@
 }
 
 @font-face {
+  font-family: "Area";
+  src: url("./assets/fonts/area.otf") format("opentype");
+  font-style: normal;
+}
+
+@font-face {
   font-family: "Edo";
   src: url("./assets/fonts/edo.ttf") format("truetype");
   font-style: normal;
@@ -23,6 +29,7 @@
   --color-primary: #c40c0c;
   --color-secondary: #ff6500;
   --color-text: #f6ce71;
+  --color-test: #f3e7d2;
 }
 
 /*Couleurs pour le fond ? #303030 #130E0A #120D16*/
@@ -37,7 +44,6 @@
   background: linear-gradient(120deg, #001220, #020b1a, #0a1f33, #001220);
   background-size: 400% 400%;
   animation: bgMove 40s ease infinite;
-
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;

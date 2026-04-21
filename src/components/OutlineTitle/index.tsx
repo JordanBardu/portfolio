@@ -6,8 +6,8 @@ function OutlineTitle({ title, size = "medium" }: OutlineTitleProps) {
     medium: "text-6xl",
     large: "text-9xl",
   };
-  const textClasses = `${sizeMap[size]} font-bold mb-6 w-full text-outline opacity-70 flex justify-start`;
-  return <h2 className={textClasses}>{title}</h2>;
+  const textClasses = `${sizeMap[size]} font-bold mb-6 w-full text-outline opacity-70 flex justify-start font-[Area]`;
+  return <h2 className={textClasses}>{title.toUpperCase()}</h2>;
 }
 
 export default OutlineTitle;

@@ -1,17 +1,46 @@
 import OutlineTitle from "../../components/OutlineTitle";
+import reactLogoIcon from "../../assets/svg/react-icon.svg";
+import tailwindLogoIcon from "../../assets/svg/tailwind-icon.svg";
+import tsLogoIcon from "../../assets/svg/ts-icon.svg";
 
 function Skills() {
+  const titleClasses = "font-[Area] text-6xl w-full";
   return (
-    <div className="skills">
+    <div className="w-full h-full">
       <OutlineTitle title={"Competences"} size={"small"} />
-      <p>Here are some of my skills:</p>
-      <ul>
-        <li>JavaScript</li>
-        <li>React</li>
-        <li>Node.js</li>
-        <li>CSS</li>
-        <li>HTML</li>
-      </ul>
+      <div className="w-full h-full flex flex-col items-center justify-center gap-24">
+        <div className="flex flex-col gap-6 max-w-[80%] w-full">
+          <div className="flex justify-center items-center p-6 border-y border-white">
+            <h1 className={titleClasses}>Langages & Frameworks</h1>
+          </div>
+          <ul className="flex flex-row gap-6">
+            <img src={reactLogoIcon} alt="" />
+            <img src={tailwindLogoIcon} alt="" />
+            <img src={tsLogoIcon} alt="" />
+          </ul>
+        </div>
+        <div className="flex flex-col gap-6 max-w-[80%] w-full">
+          <div className="flex justify-center items-center p-6 border-y border-white">
+            <h1 className={titleClasses}>Référencement & accessibilité</h1>
+          </div>
+          <ul className="flex flex-row gap-6">
+            <li>ARIA</li>
+            <li>Lighthouse</li>
+            <li>SEO technique</li>
+            <li>OpenGraph</li>
+          </ul>
+        </div>
+        <div className="flex flex-col gap-6 max-w-[80%] w-full">
+          <div className="flex justify-center items-center p-6 border-y border-white">
+            <h1 className={titleClasses}>Autres outils</h1>
+          </div>
+          <ul className="flex flex-row gap-6">
+            <li>Git</li>
+            <li>Vite</li>
+            <li>React Testing Library</li>
+          </ul>
+        </div>
+      </div>
     </div>
   );
 }
