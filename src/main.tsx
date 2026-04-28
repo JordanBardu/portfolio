@@ -1,17 +1,19 @@
-import { StrictMode } from "react";
-import { createRoot } from "react-dom/client";
-import "./index.css";
-import App from "./App.tsx";
-import Navbar from "./components/Navbar";
-import { BrowserRouter } from "react-router";
-import Background from "./components/Background";
+import { StrictMode } from 'react';
+import { createRoot } from 'react-dom/client';
+import './index.css';
+import App from './App.tsx';
+import { BrowserRouter } from 'react-router';
+import Layout from './components/Layout';
+import { ViewportProvider } from './hooks/useViewport.tsx';
 
-createRoot(document.getElementById("root")!).render(
+createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <BrowserRouter>
-      <Background />
-      <Navbar />
-      <App />
+      <ViewportProvider>
+        <Layout>
+          <App />
+        </Layout>
+      </ViewportProvider>
     </BrowserRouter>
   </StrictMode>,
 );

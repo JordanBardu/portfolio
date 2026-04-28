@@ -1,4 +1,5 @@
-import GradientLayer from "../GradientLayer";
+import GradientLayer from '../GradientLayer';
+
 function Background() {
   return (
     <div className="fixed inset-0 -z-10 pointer-events-none overflow-hidden">

@@ -32,13 +32,15 @@
   --color-test: #f3e7d2;
 }
 
-/*Couleurs pour le fond ? #303030 #130E0A #120D16*/
-
 :root {
   font-family: "Mont", system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
-
+  margin: 0;
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
   background: linear-gradient(120deg, #001220, #020b1a, #0a1f33, #001220);
@@ -57,7 +59,6 @@
 
 body {
   margin: 0;
-  display: flex;
   min-width: 320px;
   min-height: 100vh;
 }

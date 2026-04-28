@@ -62,8 +62,8 @@ function ContactForm() {
         className="flex flex-col gap-4 w-full"
         onSubmit={handleSubmit(sendEmail)}
       >
-        <div className="flex w-full justify-center gap-6">
-          <div className="flex flex-col w-[48%]">
+        <div className="flex w-full lg:flex-row flex-col items-center justify-center gap-6">
+          <div className="flex flex-col lg:w-[48%] w-full">
             <label htmlFor="firstname" className="text-sm mb-1">
               Prénom
             </label>
@@ -81,7 +81,7 @@ function ContactForm() {
             )}
           </div>
 
-          <div className="flex flex-col w-[48%]">
+          <div className="flex flex-col lg:w-[48%] w-full">
             <label htmlFor="lastname" className="text-sm mb-1">
               Nom
             </label>

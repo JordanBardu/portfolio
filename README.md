@@ -10,7 +10,4 @@
 - Position titre page
 
 ## Progression depuis la dernière session
-- Création du .env pour les clés EmailJS 
-- Installation de Sonner et toast pour le formulaire de contact
-- Mise en place de la validation du formulaire de contact
-- Séparation du formulaire de contact dans un composant
+- Fix du responsive desktop (icones et lignes de séparation)

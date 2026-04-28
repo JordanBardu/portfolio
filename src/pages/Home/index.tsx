@@ -1,5 +1,5 @@
 import content from './section_content.json';
-import { motion, useDragControls } from 'motion/react';
+import { motion } from 'motion/react';
 import reactIconSvg from '../../assets/svg/react-icon.svg';
 import typescriptIconSvg from '../../assets/svg/ts-icon.svg';
 import tailwindIconSvg from '../../assets/svg/tailwind-icon.svg';
@@ -7,8 +7,16 @@ import ExternalLinks from '../../components/ExternalLinks';
 import PrimaryButton from '../../components/PrimaryButton';
 import { PrimaryButtonSizeEnum } from '../../components/PrimaryButton/types.ts';
 import ContactForm from '../../components/ContactForm';
+import useIsSmallScreen from '../../hooks/useIsSmallScreen.ts';
+import { SCREEN_SIZE } from '../../hooks/types.ts';
+import StaticSection from '../../components/StaticSection';
+import DraggableSection from '../../components/AnimatedSection';
 
 function Home() {
+  const isMobile = useIsSmallScreen(SCREEN_SIZE.LG);
+
+  console.log(isMobile);
+
   const handleArrowClick = () => {
     const target = document.getElementById('home-sections');
     if (!target) return;
@@ -29,29 +37,26 @@ function Home() {
 
   return (
     <div className="flex flex-col items-center">
-      <div className="relative min-h-screen w-full flex flex-row items-center">
-        <div className="flex flex-row justify-center items-center gap-12">
-          {/*Titre principal: Nom, Prénom*/}
-          <h1 className="inline-block font-[Area] text-8xl ml-8 text-center">
+      <div className="relative min-h-screen w-full flex lg:flex-row flex-col gap-16 lg:gap-0 items-center">
+        <div className="flex flex-row justify-center items-center gap-12 mt-12 lg:mt-0">
+          <h1 className="inline-block font-[Area] lg:text-8xl text-5xl lg:ml-8 text-center">
             <span className="bg-gradient-to-r from-[#c40c0c] to-[#ff6500] bg-clip-text text-transparent">
               Jordan
             </span>
             <br />
-            <span className="bg-gradient-to-r from-[#c40c0c] to-[#ff6500] bg-clip-text text-transparent ml-32">
+            <span className="bg-gradient-to-r from-[#c40c0c] to-[#ff6500] bg-clip-text text-transparent lg:ml-32">
               Bardu
             </span>
           </h1>
-          {/*Les trois lignes entre le nom et le reste*/}
-          <div className="flex flex-row gap-[4px]">
+          <div className="hidden lg:flex lg:flex-row lg:gap-[4px]">
             <div className="h-42 w-[2px] bg-white" />
             <div className="h-42 w-[2px] bg-white" />
             <div className="h-42 w-[2px] bg-white" />
           </div>
         </div>
-        {/*Titre Développeur + icônes animées*/}
-        <div className="flex flex-col ml-6">
+        <div className="flex flex-col items-center lg:items-start ml-6">
           <motion.p
-            className="text-7xl font-semibold font-[Nunito]"
+            className="lg:text-7xl text-2xl font-semibold font-[Nunito]"
             initial={{ y: 30 }}
             animate={{ y: -10 }}
             transition={{ duration: 0.7, delay: 0.5, ease: 'easeInOut' }}
@@ -73,7 +78,7 @@ function Home() {
             <motion.img
               src={reactIconSvg}
               alt=""
-              className="h-16 w-16"
+              className={isMobile ? 'h-12 w-12' : 'h-16 w-16'}
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 1, ease: 'easeInOut' }}
@@ -81,7 +86,7 @@ function Home() {
             <motion.img
               src={typescriptIconSvg}
               alt=""
-              className="h-10 w-10"
+              className={isMobile ? 'h-8 w-8' : 'h-10 w-10'}
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 1.1, ease: 'easeInOut' }}
@@ -89,7 +94,7 @@ function Home() {
             <motion.img
               src={tailwindIconSvg}
               alt=""
-              className="h-16 w-16"
+              className={isMobile ? 'h-12 w-12' : 'h-16 w-16'}
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 1.2, ease: 'easeInOut' }}
@@ -97,69 +102,50 @@ function Home() {
           </div>
         </div>
 
-        <article className="absolute bottom-8 left-8">
+        <article className="absolute lg:bottom-8 lg:left-8 bottom-48">
           <ExternalLinks />
         </article>
-
-        <div className="absolute right-8">
+        {!isMobile && (
+          <div className="fixed bottom-8 right-8">
+            <PrimaryButton
+              icon="fa-arrow-down"
+              onClick={handleArrowClick}
+              iconSize={PrimaryButtonSizeEnum.LARGE}
+            />
+          </div>
+        )}
+        <div className="lg:fixed lg:right-44 lg:bottom-8 flex items-center justify-center">
           <PrimaryButton
             icon="fa-pen"
-            content="ME CONTACTER"
-            buttonSize={PrimaryButtonSizeEnum.LARGE}
-            textSize={PrimaryButtonSizeEnum.LARGE}
-            iconSize={PrimaryButtonSizeEnum.MEDIUM}
+            content={isMobile ? undefined : 'ME CONTACTER'}
+            buttonSize={
+              isMobile
+                ? PrimaryButtonSizeEnum.SMALL
+                : PrimaryButtonSizeEnum.LARGE
+            }
+            textSize={
+              isMobile
+                ? PrimaryButtonSizeEnum.SMALL
+                : PrimaryButtonSizeEnum.LARGE
+            }
+            iconSize={
+              isMobile
+                ? PrimaryButtonSizeEnum.SMALL
+                : PrimaryButtonSizeEnum.MEDIUM
+            }
             onClick={handleContactClick}
-          />
-        </div>
-        <div className="fixed bottom-8 right-8">
-          <PrimaryButton
-            icon="fa-arrow-down"
-            onClick={handleArrowClick}
-            iconSize={PrimaryButtonSizeEnum.LARGE}
           />
         </div>
       </div>
 
       <div id="home-sections" className="flex flex-col items-center w-full">
-        {content.sections.map((section, index) => {
-          const dragControls = useDragControls();
-          const floatX = (index % 2 === 0 ? 1 : -1) * (10 + index * 4);
-          const floatY = (index % 3 === 0 ? -1 : 1) * (8 + index * 3);
-
-          return (
-            <motion.section
-              key={index}
-              drag
-              dragControls={dragControls}
-              dragListener={false}
-              dragMomentum={false}
-              className="flex relative flex-col items-center w-[80%] p-12 mt-36 border overflow-hidden rounded-2xl border-white/40 select-none backdrop-blur-xl bg-white/3 shadow-[0_8px_32px_rgba(0,0,0,0.25)]"
-              animate={{
-                x: [0, floatX, -floatX * 0.4, floatX * 0.2, 0],
-                y: [0, floatY, -floatY * 0.35, floatY * 0.25, 0],
-              }}
-              transition={{
-                duration: 18 + index * 4,
-                repeat: Infinity,
-                ease: 'easeInOut',
-              }}
-            >
-              <motion.div
-                className="bg-white/40 h-4 w-full absolute top-0 cursor-grab active:cursor-grabbing"
-                onPointerDown={(e) => dragControls.start(e)}
-              />
-
-              <div className="text-center w-full">
-                <h2 className="text-9xl font-bold mb-4 w-full text-outline opacity-70 flex justify-start">
-                  {section.title}
-                </h2>
-                <p className="text-lg opacity-90 font-[Nunito] leading-relaxed">
-                  {section.description}
-                </p>
-              </div>
-            </motion.section>
-          );
-        })}
+        {content.sections.map((section, index) =>
+          isMobile ? (
+            <StaticSection key={index} section={section} />
+          ) : (
+            <DraggableSection key={index} section={section} index={index} />
+          ),
+        )}
       </div>
       <ContactForm />
     </div>
