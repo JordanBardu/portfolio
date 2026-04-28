@@ -1,0 +1,12 @@
+{
+  "sections": [
+    {
+      "title": "A PROPOS",
+      "description": "Je suis Jordan Bardu, 26 ans, développeur React/TypeScript junior passionné par la création d’interfaces modernes, fluides et animées, adaptées au support mobile. J'ai une expérience concrète en tant que développeur avec 2 ans d'informatique à l'université avant de partir en entreprise en tant qu'alternant pendant 1 an et demi dans le cadre d'une formation OpenClassRooms ce qui m'a permis d'allier compétences théoriques et savoir-faire pratique."
+    },
+    {
+      "title": "STACK TECHNIQUE",
+      "description": "Ma stack principale repose sur React, avec également des compétences en React Native, ainsi que sur TypeScript et Tailwind CSS.\nJe maîtrise les fondamentaux du développement web (HTML, CSS, JavaScript) et j’accorde une attention particulière à la qualité de l’expérience utilisateur, notamment à travers des animations réalisées avec Framer Motion.\n\nJ’utilise Git pour le versioning et développe des projets respectant les bonnes pratiques en matière d’accessibilité et de référencement SEO.\nMon profil est complété par la gestion d’état avec Redux ou Zustand, la récupération de données avec React Query, ainsi que par l’écriture de tests unitaires à l’aide de React Testing Library."
+    }
+  ]
+}
