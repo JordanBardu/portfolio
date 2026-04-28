@@ -1,9 +1,8 @@
-export enum SCREEN_SIZE {
-  XXS = 0,
-  XS = 375,
-  SM = 640,
-  MD = 768,
-  LG = 1024,
-  XL = 1280,
-  XXL = 1536,
-}
+export const SCREEN_SIZE = {
+  SM: 640,
+  MD: 768,
+  LG: 1024,
+  XL: 1280,
+} as const;
+
+export type SCREEN_SIZE = (typeof SCREEN_SIZE)[keyof typeof SCREEN_SIZE];

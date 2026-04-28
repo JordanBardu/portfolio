@@ -7,8 +7,11 @@ export type PrimaryButtonProps = {
   onClick: () => void;
 };
 
-export enum PrimaryButtonSizeEnum {
-  SMALL = "small",
-  MEDIUM = "medium",
-  LARGE = "large",
-}
+export const PrimaryButtonSizeEnum = {
+  SMALL: 'small',
+  MEDIUM: 'medium',
+  LARGE: 'large',
+} as const;
+
+export type PrimaryButtonSizeEnum =
+  (typeof PrimaryButtonSizeEnum)[keyof typeof PrimaryButtonSizeEnum];
