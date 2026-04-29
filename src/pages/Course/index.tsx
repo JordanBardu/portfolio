@@ -1,4 +1,3 @@
-import OutlineTitle from '../../components/OutlineTitle';
 import {
   VerticalTimeline,
   VerticalTimelineElement,
@@ -15,7 +14,6 @@ function Course() {
 
   return (
     <div className="p-6">
-      <OutlineTitle title={'Parcours'} size={'small'} />
       <div className="w-full h-12" />
       <VerticalTimeline>
         <VerticalTimelineElement

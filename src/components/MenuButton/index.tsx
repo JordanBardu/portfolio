@@ -12,14 +12,11 @@ function MenuButton({ route, label }: MenuButtonProps) {
     '/skills': 'fa-wrench',
   };
   const classes =
-    'absolute inset-0 flex items-center justify-center lg:text-l text-sm font-black uppercase tracking-wide transition-all duration-300';
+    'absolute inset-0 flex items-center justify-center lg:text-base text-sm font-black uppercase tracking-wide transition-all duration-300';
 
   return (
-    <li>
-      <Link
-        to={route}
-        className="relative overflow-hidden group lg:px-4 pt-4 h-full"
-      >
+    <li className="h-full flex justify-center items-center">
+      <Link to={route} className="relative group lg:px-4 pt-4">
         {isMobile ? (
           <div className="flex flex-col items-center gap-2">
             <i

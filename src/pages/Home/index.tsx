@@ -11,6 +11,7 @@ import useIsSmallScreen from '../../hooks/useIsSmallScreen.ts';
 import { SCREEN_SIZE } from '../../hooks/types.ts';
 import StaticSection from '../../components/StaticSection';
 import DraggableSection from '../../components/AnimatedSection';
+import { useEffect } from 'react';
 
 function Home() {
   const isMobile = useIsSmallScreen(SCREEN_SIZE.LG);
@@ -26,6 +27,14 @@ function Home() {
       behavior: 'smooth',
     });
   };
+
+  useEffect(() => {
+    if (location.hash === '#contact-form') {
+      document
+        .getElementById('contact-form')
+        ?.scrollIntoView({ behavior: 'smooth' });
+    }
+  }, [location.hash]);
 
   const handleContactClick = () => {
     document
@@ -112,28 +121,30 @@ function Home() {
             />
           </div>
         )}
-        <div className="lg:fixed lg:right-44 lg:bottom-8 flex items-center justify-center">
-          <PrimaryButton
-            icon="fa-pen"
-            content={'ME CONTACTER'}
-            buttonSize={
-              isMobile
-                ? PrimaryButtonSizeEnum.SMALL
-                : PrimaryButtonSizeEnum.LARGE
-            }
-            textSize={
-              isMobile
-                ? PrimaryButtonSizeEnum.SMALL
-                : PrimaryButtonSizeEnum.LARGE
-            }
-            iconSize={
-              isMobile
-                ? PrimaryButtonSizeEnum.SMALL
-                : PrimaryButtonSizeEnum.MEDIUM
-            }
-            onClick={handleContactClick}
-          />
-        </div>
+        {isMobile && (
+          <div className="lg:fixed lg:right-44 lg:bottom-8 flex items-center justify-center">
+            <PrimaryButton
+              icon="fa-pen"
+              content={'ME CONTACTER'}
+              buttonSize={
+                isMobile
+                  ? PrimaryButtonSizeEnum.SMALL
+                  : PrimaryButtonSizeEnum.LARGE
+              }
+              textSize={
+                isMobile
+                  ? PrimaryButtonSizeEnum.SMALL
+                  : PrimaryButtonSizeEnum.LARGE
+              }
+              iconSize={
+                isMobile
+                  ? PrimaryButtonSizeEnum.SMALL
+                  : PrimaryButtonSizeEnum.MEDIUM
+              }
+              onClick={handleContactClick}
+            />
+          </div>
+        )}
       </div>
 
       <div id="home-sections" className="flex flex-col items-center w-full">
