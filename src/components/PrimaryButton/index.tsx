@@ -10,8 +10,8 @@ function PrimaryButton({
 }: PrimaryButtonProps) {
   const buttonClasses = `absolute inset-0 bg-test rounded-3xl flex justify-center items-center transition-transform duration-200 ease-out hover:translate-x-[4px] hover:translate-y-[4px] hover:cursor-pointer active:translate-x-[0px] active:translate-y-[0px] border-4 border-[#c40c0c] active:border-[#f6ce71] hover:border-[#f6ce71] ${content && icon ? 'gap-4' : ''}`;
   const buttonSizeMap = {
-    small: 'h-24 w-24',
-    medium: 'h-24 w-52',
+    small: 'h-18 w-56',
+    medium: 'h-24 w-56',
     large: 'h-24 w-76',
   };
   const iconSizeMap = {

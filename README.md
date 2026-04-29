@@ -1,7 +1,6 @@
 ## To Do
-- Faire une page Compétences à la place de contact et mettre un accès au form sur le Hero
 - Responsive 
-- Tester sur différents navigateurs/écrans
+- Tester sur différents navigateurs/écrans et diminuer la taille globale du layout/des boutons
 - Rajouter un bouton de redirection sur "Stack technique" pour rediriger sur les compétences
 
 
@@ -10,4 +9,7 @@
 - Position titre page
 
 ## Progression depuis la dernière session
-- Fix du responsive desktop (icones et lignes de séparation)
+- Fix du responsive desktop (icônes et lignes de séparation)
+- Déploiement sur Vercel 
+- Squelette de la page Projets
+- Fix du menu en responsive 
