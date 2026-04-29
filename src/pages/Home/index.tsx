@@ -141,7 +141,7 @@ function Home() {
           isMobile ? (
             <StaticSection key={index} section={section} />
           ) : (
-            <DraggableSection key={index} section={section} index={index} />
+            <DraggableSection key={index} section={section} />
           ),
         )}
       </div>
