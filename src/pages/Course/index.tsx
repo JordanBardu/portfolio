@@ -7,8 +7,12 @@ import 'react-vertical-timeline-component/style.min.css';
 import jooxterLogo from '../../assets/images/logo_Jooxter_mise_en_avant_homepage.png';
 import univLogo from '../../assets/images/Logotype_Université_de_Lille_2022.svg.png';
 import ocrLogo from '../../assets/images/logo_open_classroom.png';
+import useIsSmallScreen from '../../hooks/useIsSmallScreen.ts';
+import { SCREEN_SIZE } from '../../hooks/types.ts';
 
 function Course() {
+  const isMobile = useIsSmallScreen(SCREEN_SIZE.LG);
+
   return (
     <div className="p-6">
       <OutlineTitle title={'Parcours'} size={'small'} />
@@ -33,7 +37,7 @@ function Course() {
             color: '#fff',
             height: '40px',
             width: '40px',
-            marginLeft: '-20px',
+            marginLeft: isMobile ? '' : '-20px',
             marginTop: '10px',
           }}
         >
@@ -97,7 +101,7 @@ function Course() {
             color: '#fff',
             height: '40px',
             width: '40px',
-            marginLeft: '-20px',
+            marginLeft: isMobile ? '' : '-20px',
             marginTop: '10px',
           }}
         >
@@ -141,7 +145,7 @@ function Course() {
             color: '#fff',
             height: '40px',
             width: '40px',
-            marginLeft: '-20px',
+            marginLeft: isMobile ? '' : '-20px',
             marginTop: '10px',
           }}
         >

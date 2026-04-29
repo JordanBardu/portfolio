@@ -6,7 +6,7 @@ function App() {
   return (
     <>
       <Toaster richColors position="bottom-left" />
-      <AppRoutes />;
+      <AppRoutes />
     </>
   );
 }

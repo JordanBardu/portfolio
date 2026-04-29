@@ -15,8 +15,6 @@ import DraggableSection from '../../components/AnimatedSection';
 function Home() {
   const isMobile = useIsSmallScreen(SCREEN_SIZE.LG);
 
-  console.log(isMobile);
-
   const handleArrowClick = () => {
     const target = document.getElementById('home-sections');
     if (!target) return;
@@ -117,7 +115,7 @@ function Home() {
         <div className="lg:fixed lg:right-44 lg:bottom-8 flex items-center justify-center">
           <PrimaryButton
             icon="fa-pen"
-            content={isMobile ? undefined : 'ME CONTACTER'}
+            content={'ME CONTACTER'}
             buttonSize={
               isMobile
                 ? PrimaryButtonSizeEnum.SMALL
@@ -143,7 +141,7 @@ function Home() {
           isMobile ? (
             <StaticSection key={index} section={section} />
           ) : (
-            <DraggableSection key={index} section={section} index={index} />
+            <DraggableSection key={index} section={section} />
           ),
         )}
       </div>

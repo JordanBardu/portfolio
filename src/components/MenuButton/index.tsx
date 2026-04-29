@@ -16,11 +16,17 @@ function MenuButton({ route, label }: MenuButtonProps) {
 
   return (
     <li>
-      <Link to={route} className="relative overflow-hidden group px-4 h-full">
+      <Link
+        to={route}
+        className="relative overflow-hidden group lg:px-4 pt-4 h-full"
+      >
         {isMobile ? (
-          <span className={`${classes} z-20 text-text`}>
-            <i className={`fa-solid ${ROUTE_ICONS[route] ?? 'fa-circle'}`} />
-          </span>
+          <div className="flex flex-col items-center gap-2">
+            <i
+              className={`fa-solid ${ROUTE_ICONS[route] ?? 'fa-circle'} text-sm text-text`}
+            />
+            <span className="text-[6px] uppercase text-text">{label}</span>
+          </div>
         ) : (
           <>
             <span className={`${classes} z-20 text-text`}>{label}</span>
