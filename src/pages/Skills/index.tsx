@@ -1,10 +1,5 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
-  faReact,
-  faTailwindCss,
-  faTypescript,
-} from '@fortawesome/free-brands-svg-icons';
-import {
   faCode,
   faUniversalAccess,
   faUserTie,
@@ -26,16 +21,12 @@ function Skills() {
             <h1 className={titleClasses}>LANGAGES & FRAMEWORKS</h1>{' '}
             <FontAwesomeIcon icon={faCode} className={`${iconClasses}`} />
           </div>
-          <ul className="flex flex-row lg:gap-4 gap-2">
-            <FontAwesomeIcon icon={faReact} className="lg:text-7xl text-5xl" />
-            <FontAwesomeIcon
-              icon={faTypescript}
-              className="lg:text-7xl text-5xl"
-            />
-            <FontAwesomeIcon
-              icon={faTailwindCss}
-              className="lg:text-7xl text-5xl"
-            />
+          <ul className="flex lg:flex-row flex-col items-center gap-4">
+            <li className={liClasses}>ReactJS</li>
+            {isMobile ? null : <li className={liClasses}>·</li>}
+            <li className={liClasses}>TypeScript</li>
+            {isMobile ? null : <li className={liClasses}>·</li>}
+            <li className={liClasses}>Tailwind CSS</li>
           </ul>
         </div>
         <div className="flex flex-col gap-6 max-w-[80%] w-full">
@@ -46,7 +37,7 @@ function Skills() {
               className={`${iconClasses}`}
             />
           </div>
-          <ul className="flex lg:flex-row flex-col items-center gap-6">
+          <ul className="flex lg:flex-row flex-col items-center gap-4">
             <li className={liClasses}>ARIA</li>
             {isMobile ? null : <li className={liClasses}>·</li>}
             <li className={liClasses}>Lighthouse</li>
@@ -61,7 +52,7 @@ function Skills() {
             <h1 className={titleClasses}>AUTRES OUTILS</h1>
             <FontAwesomeIcon icon={faWrench} className={`${iconClasses}`} />
           </div>
-          <ul className="flex lg:flex-row flex-col gap-6 items-center">
+          <ul className="flex lg:flex-row flex-col gap-4 items-center">
             <li className={liClasses}>Git</li>
             {isMobile ? null : <li className={liClasses}>·</li>}
             <li className={liClasses}>Vite</li>
@@ -74,7 +65,7 @@ function Skills() {
             <h1 className={titleClasses}>SOFT KILLS</h1>
             <FontAwesomeIcon icon={faUserTie} className={`${iconClasses}`} />
           </div>
-          <ul className="flex lg:flex-row flex-col gap-6 items-center">
+          <ul className="flex lg:flex-row flex-col gap-4 items-center">
             <li className={liClasses}>Méthode Agile</li>
             {isMobile ? null : <li className={liClasses}>·</li>}
             <li className={liClasses}>Travail d'équipe</li>

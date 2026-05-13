@@ -26,19 +26,13 @@ function PrimaryButton({
     large: 'text-2xl',
   };
   return (
-    <div
-      className={`relative group ${buttonSizeMap[buttonSize]}`}
-      aria-label="scroll button"
-    >
-      <div
-        className="
-          absolute inset-0 rounded-3xl bg-[#c40c0c]
-          translate-x-[10px] translate-y-[10px]
-          transition-colors duration-200
-          group-hover:bg-[#f6ce71]
-        "
-      />
-      <button onClick={onClick} className={buttonClasses}>
+    <div className={`relative group ${buttonSizeMap[buttonSize]}`}>
+      <div className="absolute inset-0 rounded-3xl bg-[#c40c0c] translate-x-[10px] translate-y-[10px] transition-colors duration-200 group-hover:bg-[#f6ce71]" />
+      <button
+        onClick={onClick}
+        className={buttonClasses}
+        aria-label={content ? String(content) : 'bouton'}
+      >
         {icon && (
           <FontAwesomeIcon
             icon={icon}
@@ -46,9 +40,9 @@ function PrimaryButton({
           />
         )}
         {content && (
-          <p className={`text-black ${textSizeMap[textSize]} font-bold`}>
+          <span className={`text-black ${textSizeMap[textSize]} font-bold`}>
             {content}
-          </p>
+          </span>
         )}
       </button>
     </div>
