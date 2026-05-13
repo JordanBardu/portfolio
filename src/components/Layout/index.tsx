@@ -7,6 +7,7 @@ const ROUTE_TITLES: Record<string, string> = {
   '/course': 'Parcours',
   '/projects': 'Projets',
   '/skills': 'Compétences',
+  '/contact': 'Contact',
 };
 
 function Layout({ children }: { children: React.ReactNode }) {

@@ -1,4 +1,5 @@
 import { type PrimaryButtonProps, PrimaryButtonSizeEnum } from './types.ts';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 function PrimaryButton({
   icon,
@@ -25,7 +26,10 @@ function PrimaryButton({
     large: 'text-2xl',
   };
   return (
-    <div className={`relative group ${buttonSizeMap[buttonSize]}`}>
+    <div
+      className={`relative group ${buttonSizeMap[buttonSize]}`}
+      aria-label="scroll button"
+    >
       <div
         className="
           absolute inset-0 rounded-3xl bg-[#c40c0c]
@@ -35,10 +39,17 @@ function PrimaryButton({
         "
       />
       <button onClick={onClick} className={buttonClasses}>
-        <i className={`fa-solid ${icon} text-black ${iconSizeMap[iconSize]}`} />
-        <p className={`text-black ${textSizeMap[textSize]} font-bold`}>
-          {content}
-        </p>
+        {icon && (
+          <FontAwesomeIcon
+            icon={icon}
+            className={`text-black ${iconSizeMap[iconSize]}`}
+          />
+        )}
+        {content && (
+          <p className={`text-black ${textSizeMap[textSize]} font-bold`}>
+            {content}
+          </p>
+        )}
       </button>
     </div>
   );
