@@ -1,6 +1,62 @@
 [
-  { "id": 1, "title": "Kasa", "url": "https://p7kasa.vercel.app/", "github_url": "https://github.com/JordanBardu/P7-Kasa", "description": "Le but était de créer une page d'accueil pour un site de voyage, en utilisant du HTML et du CSS et à l'aide d'une maquette Figma il fallait obtenir une page responsive pour toutes les tailles d'écran. On pourrait encore améliorer le projet en rajoutant plusieurs pages, on pourrait prévoir un responsive pour des écrans plus grands ou avoir une intégration Google Maps sur les pages logement afin d'avoir une localisation précise.", "thumbnail": "kasa.png" },
-  { "id": 2, "title": "Argent Bank", "url": "https://p10-argent-bank-gamma.vercel.app/", "github_url": "https://github.com/JordanBardu/P10ArgentBank","description": "Dans le cadre de ma formation, j'ai développé le front-end d'une application bancaire en React et Redux, connectée à un back-end Node.js existant via des appels API REST. L'objectif était de créer un tableau de bord utilisateur complet et responsive tout en gérant l'état global via Redux. J'ai également documenté les endpoints API avec Swagger, ce qui m'a permis de développer d'appréhender la structure d'un projet complet front+back. On peut encore améliorer le projet avec une meilleure gestion des erreurs API par exemple ou en ayant une page visuellement plus attractive et moderne.", "thumbnail": "argentbank.png"},
-  { "id": 3, "title": "Portfolio Nina Carducci", "url": "https://jordanbardu.github.io/ninacarducci.github.io/", "github_url": "https://github.com/JordanBardu/ninacarducci.github.io","description": "Dans le cadre de ma formation, j'ai optimisé le référencement, les performances et l'accessibilité d'un site existant en utilisant Lighthouse et Wave pour auditer et identifier les problèmes. J'ai appliqué des améliorations concrètes sur la structure du code, la vitesse de chargement et la conformité ARIA, puis documenté les résultats dans un rapport comparatif avant/après illustrant l'impact des modifications sur le SEO et l'expérience utilisateur. Le projet pourrait être plus complet en permettant par exemple de télécharger les images depuis la galerie.", "thumbnail": "ninacarducci.png" },
-  { "id": 5, "title": "OhMyFood", "url": "https://jordanbardu.github.io/OhMyFood/", "github_url": "https://github.com/JordanBardu/OhMyFood","description": "J'ai intégré la maquette mobile-first d'une start-up à partir de designs Figma, en utilisant Sass pour structurer et maintenir le CSS, et en implémentant des animations CSS pour enrichir l'expérience utilisateur et la moderniser. Le projet a été versionné avec Git et GitHub, me permettant de consolider les bases de mon workflow de développeur, j'ai également approfondi mes connaissances en CSS principalement, en adoptant des standards actuels, le projet peut encore être amélioré en ajoutant par exemple un système de réservation ou avoir des pages restaurants plus complètes.", "thumbnail": "ohmyfood.png" }
+  {
+    "id": 1,
+    "title": "Kasa • Location immobilière",
+    "url": "https://p7kasa.vercel.app/",
+    "github_url": "https://github.com/JordanBardu/P7-Kasa",
+    "thumbnail": "kasa.png",
+    "stack": ["react"],
+    "sections": {
+      "contexte": "Mission freelance pour Kasa, leader français de la location entre particuliers, dans le cadre d'une refonte complète de leur plateforme vieillissante en ASP.NET vers une stack JavaScript moderne.",
+      "objectifs": "Développer intégralement le front-end à partir de maquettes Figma responsives, en implémentant la navigation, les composants réutilisables et les interactions utilisateur, sans back-end disponible.",
+      "competences": "Architecture React en composants réutilisables, routage avec React Router, intégration pixel-perfect de maquettes Figma, carrousel d'images et composants Collapse animés.",
+      "resultats": "Application multi-pages fonctionnelle et responsive avec gestion des erreurs, carrousel circulaire et accordéons conformes aux specs du designer.",
+      "ameliorations": "Connexion à un vrai back-end Node.js, ajout d'un système de réservation et intégration Google Maps sur les pages logement."
+    }
+  },
+  {
+    "id": 2,
+    "title": "Argent Bank • Banque en ligne",
+    "url": "https://p10-argent-bank-gamma.vercel.app/",
+    "github_url": "https://github.com/JordanBardu/P10ArgentBank",
+    "thumbnail": "argentbank.png",
+    "stack": ["react"],
+    "sections": {
+      "contexte": "Intégration en tant que développeur front-end chez Argent Bank, une banque en ligne en cours de lancement, pour développer le système d'authentification, le tableau de bord utilisateur et proposer une modélisation des routes API de gestion des transactions.",
+      "objectifs": "Créer une application React complète et responsive connectée à une API REST existante, gérant l'authentification, la protection des routes privées et la modification du profil, puis modéliser les endpoints de la phase 2 via Swagger.",
+      "competences": "Gestion d'état global avec Redux, authentification JWT, protection de routes privées, optimisation des images, composants réutilisables et modélisation d'endpoints API en syntaxe Swagger/YAML.",
+      "resultats": "Application bancaire fonctionnelle avec authentification sécurisée, tableau de bord protégé et modification du pseudo, accompagnée d'un document Swagger YAML proposant les routes de gestion des transactions.",
+      "ameliorations": "Implémentation concrète de la phase 2 côté front-end, meilleure gestion des erreurs API et interface visuellement plus moderne."
+    }
+  },
+  {
+    "id": 3,
+    "title": "Nina Carducci • Portfolio de photographe",
+    "url": "https://jordanbardu.github.io/ninacarducci.github.io/",
+    "github_url": "https://github.com/JordanBardu/ninacarducci.github.io",
+    "thumbnail": "ninacarducci.png",
+    "stack": ["react"],
+    "sections": {
+      "contexte": "Mission freelance d'optimisation SEO et accessibilité pour le portfolio d'une photographe professionnelle bordelaise, suite à une prospection client et un audit initial révélant des performances insuffisantes.",
+      "objectifs": "Optimiser les performances, le SEO technique, l'accessibilité et le référencement local du site, puis livrer un rapport comparatif avant/après documentant l'impact de chaque modification.",
+      "competences": "Audit de performances avec Lighthouse et Wave, optimisation des images, référencement local via Schema.org, intégration des metas OpenGraph et correction de la conformité ARIA.",
+      "resultats": "Amélioration significative des scores Lighthouse en performance, accessibilité et SEO, référencement local opérationnel et metas réseaux sociaux intégrées, documentés dans un rapport illustré avant/après.",
+      "ameliorations": "Ajout d'une fonctionnalité de téléchargement des images depuis la galerie et enrichissement des métadonnées pour un meilleur référencement."
+    }
+  },
+  {
+    "id": 5,
+    "title": "OhMyFood • Menus de restaurants",
+    "url": "https://jordanbardu.github.io/OhMyFood/",
+    "github_url": "https://github.com/JordanBardu/OhMyFood",
+    "thumbnail": "ohmyfood.png",
+    "stack": ["sass", "css"],
+    "sections": {
+      "contexte": "Intégration en tant que développeur junior chez OhMyFood, une startup de restauration gastronomique souhaitant s'imposer à Paris, pour développer leur plateforme de réservation et composition de menus en ligne.",
+      "objectifs": "Intégrer les maquettes mobile et desktop en approche mobile-first à partir de designs Figma, en implémentant des animations CSS soignées et en structurant le CSS avec Sass.",
+      "competences": "Intégration mobile-first rigoureuse à partir de maquettes Figma, structuration du CSS avec Sass, conception d'animations CSS et versioning avec Git et GitHub.",
+      "resultats": "Site responsive multi-pages répertoriant 4 menus gastronomiques parisiens, avec animations CSS fluides et architecture Sass maintenable, conforme aux maquettes et au prototype Figma.",
+      "ameliorations": "Ajout d'un système de réservation fonctionnel, pages restaurants plus complètes et extension de la plateforme à d'autres villes."
+    }
+  }
 ]

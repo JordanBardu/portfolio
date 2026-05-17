@@ -12,7 +12,8 @@ function Projects() {
             url={project.url}
             githubUrl={project.github_url}
             thumbnail={project.thumbnail}
-            description={project.description}
+            stack={project.stack}
+            sections={project.sections}
           />
         ))}
       </div>
