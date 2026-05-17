@@ -1,12 +1,62 @@
 [
-  { "id": 1, "title": "Projet 1", "url": "https://github.com", "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.", "color": "#c40c0c" },
-  { "id": 2, "title": "Projet 2", "url": "https://github.com", "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.", "color": "#ff6500" },
-  { "id": 3, "title": "Projet 3", "url": "https://github.com", "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.", "color": "#1a6b3c" },
-  { "id": 4, "title": "Projet 4", "url": "https://github.com", "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.", "color": "#1d4ed8" },
-  { "id": 5, "title": "Projet 5", "url": "https://github.com", "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.", "color": "#7c3aed" },
-  { "id": 6, "title": "Projet 6", "url": "https://github.com", "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.", "color": "#0e7490" },
-  { "id": 7, "title": "Projet 7", "url": "https://github.com", "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.", "color": "#b45309" },
-  { "id": 8, "title": "Projet 8", "url": "https://github.com", "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.", "color": "#be185d" },
-  { "id": 9, "title": "Projet 9", "url": "https://github.com", "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.", "color": "#15803d" },
-  { "id": 10, "title": "Projet 10", "url": "https://github.com", "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.", "color": "#6d28d9" }
+  {
+    "id": 1,
+    "title": "Kasa • Location immobilière",
+    "url": "https://p7kasa.vercel.app/",
+    "github_url": "https://github.com/JordanBardu/P7-Kasa",
+    "thumbnail": "kasa.png",
+    "stack": ["react"],
+    "sections": {
+      "contexte": "Mission freelance pour Kasa, leader français de la location entre particuliers, dans le cadre d'une refonte complète de leur plateforme vieillissante en ASP.NET vers une stack JavaScript moderne.",
+      "objectifs": "Développer intégralement le front-end à partir de maquettes Figma responsives, en implémentant la navigation, les composants réutilisables et les interactions utilisateur, sans back-end disponible.",
+      "competences": "Architecture React en composants réutilisables, routage avec React Router, intégration pixel-perfect de maquettes Figma, carrousel d'images et composants Collapse animés.",
+      "resultats": "Application multi-pages fonctionnelle et responsive avec gestion des erreurs, carrousel circulaire et accordéons conformes aux specs du designer.",
+      "ameliorations": "Connexion à un vrai back-end Node.js, ajout d'un système de réservation et intégration Google Maps sur les pages logement."
+    }
+  },
+  {
+    "id": 2,
+    "title": "Argent Bank • Banque en ligne",
+    "url": "https://p10-argent-bank-gamma.vercel.app/",
+    "github_url": "https://github.com/JordanBardu/P10ArgentBank",
+    "thumbnail": "argentbank.png",
+    "stack": ["react"],
+    "sections": {
+      "contexte": "Intégration en tant que développeur front-end chez Argent Bank, une banque en ligne en cours de lancement, pour développer le système d'authentification, le tableau de bord utilisateur et proposer une modélisation des routes API de gestion des transactions.",
+      "objectifs": "Créer une application React complète et responsive connectée à une API REST existante, gérant l'authentification, la protection des routes privées et la modification du profil, puis modéliser les endpoints de la phase 2 via Swagger.",
+      "competences": "Gestion d'état global avec Redux, authentification JWT, protection de routes privées, optimisation des images, composants réutilisables et modélisation d'endpoints API en syntaxe Swagger/YAML.",
+      "resultats": "Application bancaire fonctionnelle avec authentification sécurisée, tableau de bord protégé et modification du pseudo, accompagnée d'un document Swagger YAML proposant les routes de gestion des transactions.",
+      "ameliorations": "Implémentation concrète de la phase 2 côté front-end, meilleure gestion des erreurs API et interface visuellement plus moderne."
+    }
+  },
+  {
+    "id": 3,
+    "title": "Nina Carducci • Portfolio de photographe",
+    "url": "https://jordanbardu.github.io/ninacarducci.github.io/",
+    "github_url": "https://github.com/JordanBardu/ninacarducci.github.io",
+    "thumbnail": "ninacarducci.png",
+    "stack": ["react"],
+    "sections": {
+      "contexte": "Mission freelance d'optimisation SEO et accessibilité pour le portfolio d'une photographe professionnelle bordelaise, suite à une prospection client et un audit initial révélant des performances insuffisantes.",
+      "objectifs": "Optimiser les performances, le SEO technique, l'accessibilité et le référencement local du site, puis livrer un rapport comparatif avant/après documentant l'impact de chaque modification.",
+      "competences": "Audit de performances avec Lighthouse et Wave, optimisation des images, référencement local via Schema.org, intégration des metas OpenGraph et correction de la conformité ARIA.",
+      "resultats": "Amélioration significative des scores Lighthouse en performance, accessibilité et SEO, référencement local opérationnel et metas réseaux sociaux intégrées, documentés dans un rapport illustré avant/après.",
+      "ameliorations": "Ajout d'une fonctionnalité de téléchargement des images depuis la galerie et enrichissement des métadonnées pour un meilleur référencement."
+    }
+  },
+  {
+    "id": 5,
+    "title": "OhMyFood • Menus de restaurants",
+    "url": "https://jordanbardu.github.io/OhMyFood/",
+    "github_url": "https://github.com/JordanBardu/OhMyFood",
+    "thumbnail": "ohmyfood.png",
+    "stack": ["sass", "css"],
+    "sections": {
+      "contexte": "Intégration en tant que développeur junior chez OhMyFood, une startup de restauration gastronomique souhaitant s'imposer à Paris, pour développer leur plateforme de réservation et composition de menus en ligne.",
+      "objectifs": "Intégrer les maquettes mobile et desktop en approche mobile-first à partir de designs Figma, en implémentant des animations CSS soignées et en structurant le CSS avec Sass.",
+      "competences": "Intégration mobile-first rigoureuse à partir de maquettes Figma, structuration du CSS avec Sass, conception d'animations CSS et versioning avec Git et GitHub.",
+      "resultats": "Site responsive multi-pages répertoriant 4 menus gastronomiques parisiens, avec animations CSS fluides et architecture Sass maintenable, conforme aux maquettes et au prototype Figma.",
+      "ameliorations": "Ajout d'un système de réservation fonctionnel, pages restaurants plus complètes et extension de la plateforme à d'autres villes."
+    }
+  }
 ]

@@ -56,8 +56,7 @@ function ContactForm() {
   };
 
   return (
-    <section className="max-w-xl mx-auto p-6 mt-96 mb-24" id="contact-form">
-      <h2 className="text-3xl font-semibold mb-6">Contact</h2>
+    <section className="max-w-xl mx-auto" id="contact-form">
       <form
         className="flex flex-col gap-4 w-full"
         onSubmit={handleSubmit(sendEmail)}

@@ -1,4 +1,5 @@
 import { type PrimaryButtonProps, PrimaryButtonSizeEnum } from './types.ts';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 function PrimaryButton({
   icon,
@@ -10,7 +11,7 @@ function PrimaryButton({
 }: PrimaryButtonProps) {
   const buttonClasses = `absolute inset-0 bg-test rounded-3xl flex justify-center items-center transition-transform duration-200 ease-out hover:translate-x-[4px] hover:translate-y-[4px] hover:cursor-pointer active:translate-x-[0px] active:translate-y-[0px] border-4 border-[#c40c0c] active:border-[#f6ce71] hover:border-[#f6ce71] ${content && icon ? 'gap-4' : ''}`;
   const buttonSizeMap = {
-    small: 'h-18 w-56',
+    small: 'h-24 w-24',
     medium: 'h-24 w-56',
     large: 'h-24 w-76',
   };
@@ -26,19 +27,23 @@ function PrimaryButton({
   };
   return (
     <div className={`relative group ${buttonSizeMap[buttonSize]}`}>
-      <div
-        className="
-          absolute inset-0 rounded-3xl bg-[#c40c0c]
-          translate-x-[10px] translate-y-[10px]
-          transition-colors duration-200
-          group-hover:bg-[#f6ce71]
-        "
-      />
-      <button onClick={onClick} className={buttonClasses}>
-        <i className={`fa-solid ${icon} text-black ${iconSizeMap[iconSize]}`} />
-        <p className={`text-black ${textSizeMap[textSize]} font-bold`}>
-          {content}
-        </p>
+      <div className="absolute inset-0 rounded-3xl bg-[#c40c0c] translate-x-[10px] translate-y-[10px] transition-colors duration-200 group-hover:bg-[#f6ce71]" />
+      <button
+        onClick={onClick}
+        className={buttonClasses}
+        aria-label={content ? String(content) : 'bouton'}
+      >
+        {icon && (
+          <FontAwesomeIcon
+            icon={icon}
+            className={`text-black ${iconSizeMap[iconSize]}`}
+          />
+        )}
+        {content && (
+          <span className={`text-black ${textSizeMap[textSize]} font-bold`}>
+            {content}
+          </span>
+        )}
       </button>
     </div>
   );

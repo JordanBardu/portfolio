@@ -1,5 +1,7 @@
+import type { IconDefinition } from '@fortawesome/free-solid-svg-icons';
+
 export type PrimaryButtonProps = {
-  icon?: string;
+  icon?: IconDefinition;
   content?: React.ReactNode;
   buttonSize?: PrimaryButtonSizeEnum;
   iconSize?: PrimaryButtonSizeEnum;

@@ -1,4 +1,3 @@
-import OutlineTitle from '../../components/OutlineTitle';
 import {
   VerticalTimeline,
   VerticalTimelineElement,
@@ -15,7 +14,6 @@ function Course() {
 
   return (
     <div className="p-6">
-      <OutlineTitle title={'Parcours'} size={'small'} />
       <div className="w-full h-12" />
       <VerticalTimeline>
         <VerticalTimelineElement
@@ -122,8 +120,7 @@ function Course() {
             Deuxième année plus spécialisée en Informatique, approfondissement
             des compétences en développement (JS, Java, Python, C++, SQL),
             découverte de React et du développement web en général,
-            approfondissement des compétences en sciences de l'ingénieur :
-            mathématiques, physique, électronique, mécanique etc.
+            approfondissement des compétences en sciences de l'ingénieur
           </p>
         </VerticalTimelineElement>
         <VerticalTimelineElement
@@ -161,10 +158,10 @@ function Course() {
             </h4>
           </div>
           <p className="font-[Nunito] text-center">
-            Première année généraliste, premiers pas dans le code (HTML, CSS,
-            JS, Java), découverte de Git. Développement des compétences en
-            sciences de l'ingénieur : mathématiques, physique, électronique,
-            mécanique etc.
+            Première année axée sur les sciences de l'ingénieur, premiers pas
+            dans le code (HTML, CSS, JS, Java), découverte de Git. Développement
+            des compétences en mathématiques, physique, électronique, mécanique
+            etc.
           </p>
         </VerticalTimelineElement>
       </VerticalTimeline>

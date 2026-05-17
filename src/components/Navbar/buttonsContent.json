@@ -14,5 +14,9 @@
   {
     "route": "/skills",
     "label": "Compétences"
+  },
+  {
+    "route": "/contact",
+    "label": "Contact"
   }
 ]

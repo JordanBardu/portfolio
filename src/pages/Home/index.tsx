@@ -6,30 +6,18 @@ import tailwindIconSvg from '../../assets/svg/tailwind-icon.svg';
 import ExternalLinks from '../../components/ExternalLinks';
 import PrimaryButton from '../../components/PrimaryButton';
 import { PrimaryButtonSizeEnum } from '../../components/PrimaryButton/types.ts';
-import ContactForm from '../../components/ContactForm';
 import useIsSmallScreen from '../../hooks/useIsSmallScreen.ts';
 import { SCREEN_SIZE } from '../../hooks/types.ts';
 import StaticSection from '../../components/StaticSection';
 import DraggableSection from '../../components/AnimatedSection';
+import { faArrowDown } from '@fortawesome/free-solid-svg-icons';
 
 function Home() {
   const isMobile = useIsSmallScreen(SCREEN_SIZE.LG);
 
   const handleArrowClick = () => {
-    const target = document.getElementById('home-sections');
-    if (!target) return;
-
-    const y = target.getBoundingClientRect().top + window.scrollY;
-
-    window.scrollTo({
-      top: y,
-      behavior: 'smooth',
-    });
-  };
-
-  const handleContactClick = () => {
     document
-      .getElementById('contact-form')
+      .getElementById('home-sections')
       ?.scrollIntoView({ behavior: 'smooth' });
   };
 
@@ -37,7 +25,7 @@ function Home() {
     <div className="flex flex-col items-center">
       <div className="relative min-h-screen w-full flex lg:flex-row flex-col gap-16 lg:gap-0 items-center">
         <div className="flex flex-row justify-center items-center gap-12 mt-12 lg:mt-0">
-          <h1 className="inline-block font-[Area] lg:text-8xl text-5xl lg:ml-8 text-center">
+          <h1 className="inline-block font-[Area] lg:text-8xl text-6xl lg:ml-8 text-center">
             <span className="bg-gradient-to-r from-[#c40c0c] to-[#ff6500] bg-clip-text text-transparent">
               Jordan
             </span>
@@ -52,24 +40,28 @@ function Home() {
             <div className="h-42 w-[2px] bg-white" />
           </div>
         </div>
-        <div className="flex flex-col items-center lg:items-start ml-6">
+        <div className="flex flex-col items-center lg:items-start lg:ml-6">
           <motion.p
-            className="lg:text-7xl text-2xl font-semibold font-[Nunito]"
+            className="lg:text-7xl text-5xl font-semibold font-[Nunito] flex flex-col items-center lg:block"
             initial={{ y: 30 }}
             animate={{ y: -10 }}
             transition={{ duration: 0.7, delay: 0.5, ease: 'easeInOut' }}
           >
-            Développeur{' '}
+            <span>Développeur</span>
             <span className="bg-[linear-gradient(90deg,#C40C0C_0%,#FF6500_46%,#F6CE71_100%)] bg-clip-text text-transparent px-2">
               Front-end
+              <motion.span
+                className="bg-gradient-to-r from-primary via-secondary to-text bg-clip-text text-transparent"
+                animate={{ opacity: [1, 0, 1] }}
+                transition={{
+                  duration: 1,
+                  repeat: Infinity,
+                  ease: 'easeInOut',
+                }}
+              >
+                .
+              </motion.span>
             </span>
-            <motion.span
-              className="bg-gradient-to-r from-primary via-secondary to-text bg-clip-text text-transparent"
-              animate={{ opacity: [1, 0, 1] }}
-              transition={{ duration: 1, repeat: Infinity, ease: 'easeInOut' }}
-            >
-              .
-            </motion.span>
           </motion.p>
 
           <div className="flex flex-row items-center gap-2">
@@ -106,37 +98,18 @@ function Home() {
         {!isMobile && (
           <div className="fixed bottom-8 right-8">
             <PrimaryButton
-              icon="fa-arrow-down"
+              icon={faArrowDown}
               onClick={handleArrowClick}
               iconSize={PrimaryButtonSizeEnum.LARGE}
             />
           </div>
         )}
-        <div className="lg:fixed lg:right-44 lg:bottom-8 flex items-center justify-center">
-          <PrimaryButton
-            icon="fa-pen"
-            content={'ME CONTACTER'}
-            buttonSize={
-              isMobile
-                ? PrimaryButtonSizeEnum.SMALL
-                : PrimaryButtonSizeEnum.LARGE
-            }
-            textSize={
-              isMobile
-                ? PrimaryButtonSizeEnum.SMALL
-                : PrimaryButtonSizeEnum.LARGE
-            }
-            iconSize={
-              isMobile
-                ? PrimaryButtonSizeEnum.SMALL
-                : PrimaryButtonSizeEnum.MEDIUM
-            }
-            onClick={handleContactClick}
-          />
-        </div>
       </div>
 
-      <div id="home-sections" className="flex flex-col items-center w-full">
+      <div
+        id="home-sections"
+        className="flex flex-col items-center w-full lg:mb-36 mb-2"
+      >
         {content.sections.map((section, index) =>
           isMobile ? (
             <StaticSection key={index} section={section} />
@@ -145,7 +118,6 @@ function Home() {
           ),
         )}
       </div>
-      <ContactForm />
     </div>
   );
 }
