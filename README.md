@@ -15,4 +15,5 @@ Le projet est structuré autour de plusieurs sections — présentation, parcour
 
 ## Rapport WAVE et Lighthouse
 
-https://github.com/JordanBardu/portfolio/blob/fcadd90a4914e5d0a0d6bb9044ddd1922218833b/public/rapportlighthouse.png
+![Rapport Lighthouse](./public/rapportlighthouse.png)
+![Rapport WAVE](./public/rapportwave.png)
