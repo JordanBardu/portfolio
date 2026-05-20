@@ -14,3 +14,5 @@ Le projet est structuré autour de plusieurs sections — présentation, parcour
 4. Ouvrez votre navigateur à l'adresse `http://localhost:5173`
 
 ## Rapport WAVE et Lighthouse
+
+https://github.com/JordanBardu/portfolio/blob/fcadd90a4914e5d0a0d6bb9044ddd1922218833b/public/rapportlighthouse.png
