@@ -19,7 +19,7 @@ function Layout({ children }: { children: React.ReactNode }) {
       <Background />
       <Navbar />
       {title && <OutlineTitle title={title} size={'medium'} />}
-      <main>{children}</main>
+      <main className="pb-28 lg:pb-0">{children}</main>
     </>
   );
 }

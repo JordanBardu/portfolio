@@ -127,14 +127,24 @@ function ProjectCard({
           <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
         </>
       )}
-      <div className="z-10 flex flex-row items-center gap-4">
-        <h1 className="text-lg">{title}</h1>
+      <div className="z-10 flex flex-row justify-between items-end w-full pr-2">
+        <div className="flex flex-col gap-2">
+          <h1 className="text-sm font-bold font-[Nunito]">{title}</h1>
+          <div className="flex flex-row gap-2 items-center">
+            {stack.map((tech) => {
+              const icon = STACK_ICONS_MAP[tech];
+              return icon ? (
+                <FontAwesomeIcon key={tech} icon={icon} className="text-lg" />
+              ) : null;
+            })}
+          </div>
+        </div>
         <button
           onClick={() => setIsDescriptionDisplayed((prev) => !prev)}
           aria-label="Voir les détails"
           className="cursor-pointer"
         >
-          <FontAwesomeIcon icon={faCircleInfo} />
+          <FontAwesomeIcon icon={faCircleInfo} className="text-lg" />
         </button>
       </div>
       {Modal}
