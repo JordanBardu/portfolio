@@ -13,6 +13,17 @@ Le projet est structuré autour de plusieurs sections — présentation, parcour
 3. Lancez le projet avec `npm run dev`
 4. Ouvrez votre navigateur à l'adresse `http://localhost:5173`
 
+## Stack utilisée
+- **ReactJS/TypeScript**
+- T**ailwindCSS**
+- **Motion** (ex-Framer Motion) pour les animations
+- **React Hook Form** + **Zod** pour le typage, la gestion et la validation du formulaire de contact
+- **EmailJS** pour l'envoi de mail via le formulaire de contact
+- **React Vertical Timeline** pour la page Parcours
+- **Sonner** pour le toast de la page Contact
+- **Verce**l pour le déploiement continu
+- **FontAwesome** pour les différentes icônes
+
 ## Rapport WAVE et Lighthouse
 
 ![Rapport Lighthouse](./public/rapportlighthouse.png)
