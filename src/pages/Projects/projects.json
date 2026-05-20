@@ -50,7 +50,7 @@
     "url": "https://jordanbardu.github.io/OhMyFood/",
     "github_url": "https://github.com/JordanBardu/OhMyFood",
     "thumbnail": "ohmyfood.png",
-    "stack": ["sass", "css"],
+    "stack": ["html","sass", "css"],
     "sections": {
       "contexte": "Intégration en tant que développeur junior chez OhMyFood, une startup de restauration gastronomique souhaitant s'imposer à Paris, pour développer leur plateforme de réservation et composition de menus en ligne.",
       "objectifs": "Intégrer les maquettes mobile et desktop en approche mobile-first à partir de designs Figma, en implémentant des animations CSS soignées et en structurant le CSS avec Sass.",
